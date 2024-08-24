@@ -137,16 +137,22 @@
   height: 50px;
   border-radius: 50%;
   background-color: black;
-  overflow: hidden; /* Ensures the image stays within the circle */
+  overflow: hidden; /* Hide overflow to maintain circular shape */
   border: 2px solid red;
+  position: relative;
 }
 
 .icon-link img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image fully covers the circle */
+  object-fit: cover; /* Ensures the image fills the circle */
   display: block;
 }
+
+img {
+  border-radius: 50%; /* Ensures the image is circular if it overflows */
+}
+
 
 img {
   border-radius: 50%; /* Optional if you want circular images regardless of container */
