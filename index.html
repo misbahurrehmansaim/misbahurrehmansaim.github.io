@@ -127,35 +127,34 @@
     background-color: white; /* Icon background color */
 }
 
-.ftco-footer-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0; /* Ensure no extra padding is added */
-    margin: 0; /* Ensure no extra margin is added */
-    list-style: none; /* Remove default list styling */
+.ftco-footer-social li {
+  margin: 0 10px;
 }
 
 .icon-link {
-    display: inline-block;
-    border: 2px solid red; /* Red border around icons */
-    border-radius: 50%; /* Circular border for round icons */
-    padding: 5px; /* Space between icon and border */
-    margin: 5px; /* Space between icons */
-    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
 }
 
-.icon-link:hover {
-    border-color: darkred; /* Darker red on hover for better visibility */
+.icon-link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.icon-facebook,
-.icon-instagram,
-.icon-twitter,
-.icon-whatsapp,
-.fa-envelope {
-    font-size: 24px; /* Adjust icon size as needed */
-    color: black; /* Icon color */
+.icon-link {
+  border: 2px solid red;
+  padding: 5px;
 }
 
 img {
@@ -204,28 +203,7 @@ img {
         <button id="close-notification" class="close-btn">×</button>
     </div>
 </div>
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if the user is on a mobile device
-    if (window.innerWidth <= 768) { // Adjust the width as needed
-        const notification = document.getElementById('notification');
-        const closeBtn = document.getElementById('close-notification');
 
-        // Show the notification
-        notification.style.display = 'block';
-
-        // Close button functionality
-        closeBtn.addEventListener('click', function() {
-            notification.style.display = 'none';
-            // Store a flag in local storage to remember user's choice
-            localStorage.setItem('notificationDismissed', 'true');
-        });
-
-        // Check if the notification was previously dismissed
-        if (localStorage.getItem('notificationDismissed') === 'true') {
-            notification.style.display = 'none';
-        }
-    }
-});
 
 
   </head>
@@ -866,39 +844,39 @@ document.addEventListener("DOMContentLoaded", function() {
     </div> -->
 	<div class="row justify-content-center">
   <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0"> 
-
     <li class="ftco-animate">
       <a href="mailto:saim.letsconnectnow@gmail.com" target="_blank" class="icon-link">
-        <img src="images/g.png" alt="Medium" style="width:24px; height:24px;">
+        <img src="images/g.png" alt="Gmail" class="social-icon">
       </a>
     </li>
-	    <li class="ftco-animate">
+    <li class="ftco-animate">
       <a href="https://wa.me/+923005181071" target="_blank" class="icon-link">
-        <img src="images/w.png" alt="Medium" style="width:24px; height:24px;">
+        <img src="images/w.png" alt="WhatsApp" class="social-icon">
       </a>
     </li>
-	    <li class="ftco-animate">
-      <a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank" target="_blank" class="icon-link">
-        <img src="images/fb.png" alt="Medium" style="width:24px; height:24px;">
+    <li class="ftco-animate">
+      <a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank" class="icon-link">
+        <img src="images/fb.png" alt="Facebook" class="social-icon">
       </a>
     </li>
-	    <li class="ftco-animate">
-      <a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank" target="_blank" class="icon-link">
-        <img src="images/ins.jpeg" alt="Medium" style="width:24px; height:24px;">
+    <li class="ftco-animate">
+      <a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank" class="icon-link">
+        <img src="images/ins.jpeg" alt="Instagram" class="social-icon">
       </a>
     </li>
-	    <li class="ftco-animate">
+    <li class="ftco-animate">
       <a href="https://medium.com/@yourusername" target="_blank" class="icon-link">
-        <img src="images/medium.png" alt="Medium" style="width:24px; height:24px;">
+        <img src="images/medium.png" alt="Medium" class="social-icon">
       </a>
     </li>
-	  <li class="ftco-animate">
+    <li class="ftco-animate">
       <a href="https://x.com/misbah0987654" target="_blank" class="icon-link">
-        <img src="images/x.png" alt="Medium" style="width:24px; height:24px;">
+        <img src="images/x.png" alt="X" class="social-icon">
       </a>
     </li>
   </ul>
 </div>
+
 
 
 
