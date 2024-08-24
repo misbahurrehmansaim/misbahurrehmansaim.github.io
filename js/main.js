@@ -269,6 +269,28 @@
     fixedContentPos: false
   });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if the user is on a mobile device
+    if (window.innerWidth <= 768) { // Adjust the width as needed
+        const notification = document.getElementById('notification');
+        const closeBtn = document.getElementById('close-notification');
+
+        // Show the notification
+        notification.style.display = 'block';
+
+        // Close button functionality
+        closeBtn.addEventListener('click', function() {
+            notification.style.display = 'none';
+            // Store a flag in local storage to remember user's choice
+            localStorage.setItem('notificationDismissed', 'true');
+        });
+
+        // Check if the notification was previously dismissed
+        if (localStorage.getItem('notificationDismissed') === 'true') {
+            notification.style.display = 'none';
+        }
+    }
+});
 
 
 
