@@ -137,29 +137,21 @@
   height: 50px;
   border-radius: 50%;
   background-color: black;
-  text-align: center;
-  line-height: 50px;
-  position: relative;
+  overflow: hidden; /* Ensures the image stays within the circle */
+  border: 2px solid red;
 }
 
 .icon-link img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.icon-link {
-  border: 2px solid red;
-  padding: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fully covers the circle */
+  display: block;
 }
 
 img {
-    border-radius: 50%; /* Circular border for image icon */
+  border-radius: 50%; /* Optional if you want circular images regardless of container */
 }
+
 
 .notification {
     position: fixed;
