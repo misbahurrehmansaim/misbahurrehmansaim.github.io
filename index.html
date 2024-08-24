@@ -108,24 +108,30 @@
   padding: 4em 0;
 }
 .resume-link {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     text-decoration: none;
-    color: inherit;
 }
 
 .resume-icon {
-    width: 24px; /* Adjust the size of the icon as needed */
-    height: 24px;
-    margin-right: 8px; /* Space between the icon and text */
+    display: inline-block;
+    font-size: 24px; /* Adjust size as needed */
+    width: 48px; /* Adjust size as needed */
+    height: 48px; /* Adjust size as needed */
+    line-height: 48px; /* Center icon vertically */
+    border-radius: 50%; /* Make the icon circular */
+    border: 3px solid red; /* Red boundary */
+    text-align: center; /* Center icon horizontally */
+    color: black; /* Icon color */
+    background-color: white; /* Icon background color */
 }
+
 
 
 
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 
   </head>
@@ -386,6 +392,9 @@
 			<h1 class="big-4">Certificates</h1>
 			<div class="underline"></div>
 		</div>
+		<br>
+		<br>
+		<br>
 		<div class="row d-flex">
           
 	
@@ -397,7 +406,7 @@
 			   </a>
 			   <div class="text mt-3 float-right d-block">
  
-				 <h3 class="heading">SEM certificate</a></h3>
+				 <h3 class="heading">SEM certificate by Great Learning</a></h3>
 				
 			   </div>
 			 </div>
@@ -408,7 +417,7 @@
 			   </a>
 			   <div class="text mt-3 float-right d-block">
  
-				 <h3 class="heading">SEO certificate</a></h3>
+				 <h3 class="heading">SEO certificate by Great Learning</a></h3>
 				 
 			   </div>
 			 </div>
@@ -502,8 +511,8 @@
 <div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
     <h3>Check Resume</h3>
     <li class="ftco-animate" style="list-style: none;">
-      <a href="https://drive.google.com/file/d/1J7yg3qdtzacc7zlulgCpTMpzfrlL61Is/view?usp=sharing" target="_blank">
-        <span class="fa fa-file-alt"></span>
+      <a href="https://drive.google.com/file/d/1J7yg3qdtzacc7zlulgCpTMpzfrlL61Is/view?usp=sharing" target="_blank" class="resume-link">
+        <span class="fa fa-file-alt resume-icon"></span>
       </a>
     </li>
     <br>
