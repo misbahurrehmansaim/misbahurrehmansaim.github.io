@@ -109,7 +109,6 @@
 }
 .row {
     position: relative;
-    padding-bottom: 40px; /* Space for the arrow */
 }
 
 .popup-arrow {
@@ -137,17 +136,43 @@
 
 .arrow {
     position: absolute;
-    bottom: -10px; /* Position the arrow below the icon */
+    bottom: -15px; /* Adjust this value to position the arrow below the icon */
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 10px solid transparent; /* Adjust size as needed */
-    border-right: 10px solid transparent; /* Adjust size as needed */
-    border-top: 10px solid black; /* Arrow color */
+    border-left: 10px solid transparent; /* Width of the left side of the arrow */
+    border-right: 10px solid transparent; /* Width of the right side of the arrow */
+    border-top: 10px solid black; /* Arrow color and height */
 }
 
 
+
+.icon-link {
+    display: inline-block;
+    border: 2px solid blue; /* Blue border around icons */
+    border-radius: 50%; /* Circular border for round icons */
+    padding: 5px; /* Space between icon and border */
+    margin: 5px; /* Space between icons */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.icon-link:hover {
+    border-color: darkblue; /* Darker blue on hover for better visibility */
+}
+
+.icon-facebook,
+.icon-instagram,
+.icon-twitter,
+.icon-whatsapp,
+.fa-envelope {
+    font-size: 24px; /* Adjust icon size as needed */
+    color: black; /* Icon color */
+}
+
+img {
+    border-radius: 50%; /* Circular border for image icon */
+}
 
 
 
@@ -534,15 +559,16 @@
     <h3>Check Resume</h3>
     <div class="popup-arrow">
         <li class="ftco-animate" style="list-style: none;">
-          <a href="https://drive.google.com/file/d/1J7yg3qdtzacc7zlulgCpTMpzfrlL61Is/view?usp=sharing" target="_blank" class="resume-link">
-            <span class="fa fa-file-alt resume-icon"></span>
-          </a>
+            <a href="https://drive.google.com/file/d/1J7yg3qdtzacc7zlulgCpTMpzfrlL61Is/view?usp=sharing" target="_blank" class="resume-link">
+                <span class="fa fa-file-alt resume-icon"></span>
+            </a>
         </li>
         <div class="arrow"></div>
     </div>
     <br>
     <div class="underline"></div>
 </div>
+
 
 
  
@@ -790,25 +816,21 @@
         </div>
       </div>
     </div> -->
-	 <div class="row justify-content-center">
+	<div class="row justify-content-center">
   <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0"> 
-<!--     <li class="ftco-animate normal-txt">Find me on</li> -->
-    <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank"><span class="icon-facebook"></span></a></li> 
-    <li class="ftco-animate"><a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank"><span class="icon-instagram"></span></a></li>
-    <li class="ftco-animate"><a href="https://x.com/misbah0987654" target="_blank"><span class="icon-twitter"></span></a></li>
-    <!-- WhatsApp Icon -->
-    <li class="ftco-animate"><a href="https://wa.me/+923005181071" target="_blank"><span class="icon-whatsapp"></span></a></li>
-    <!-- Email Icon -->
-    <li class="ftco-animate"><a href="mailto:saim.letsconnectnow@gmail.com" target="_blank"><span class="fa fa-envelope"></span></a></li>
-<!--     <li class="ftco-animate"><a href="https://medium.com/@saim.letsconnectnow" target="_blank"><span class="fa fa-medium"></span></a></li> -->
-	  <li class="ftco-animate">
-      <a href="https://medium.com/@yourusername" target="_blank">
+    <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank" class="icon-link"><span class="icon-facebook"></span></a></li> 
+    <li class="ftco-animate"><a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank" class="icon-link"><span class="icon-instagram"></span></a></li>
+    <li class="ftco-animate"><a href="https://x.com/misbah0987654" target="_blank" class="icon-link"><span class="icon-twitter"></span></a></li>
+    <li class="ftco-animate"><a href="https://wa.me/+923005181071" target="_blank" class="icon-link"><span class="icon-whatsapp"></span></a></li>
+    <li class="ftco-animate"><a href="mailto:saim.letsconnectnow@gmail.com" target="_blank" class="icon-link"><span class="fa fa-envelope"></span></a></li>
+    <li class="ftco-animate">
+      <a href="https://medium.com/@yourusername" target="_blank" class="icon-link">
         <img src="images/medium.png" alt="Medium" style="width:24px; height:24px;">
       </a>
     </li>
   </ul>
-  </ul>
 </div>
+
 
 
 
