@@ -18,6 +18,109 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+	<style>
+/* Ensure the layout adjusts for smaller screens */
+body {
+  font-size: 14px;
+}
+
+/* Make the navbar responsive */
+.navbar {
+  flex-wrap: wrap;
+}
+.navbar-nav {
+  flex-direction: column;
+  text-align: center;
+}
+.navbar-toggler {
+  margin-left: auto;
+}
+
+/* Ensure text and images resize appropriately */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.text {
+  padding: 1rem;
+}
+
+/* Improve section padding for smaller screens */
+.ftco-section {
+  padding: 2em 1em;
+}
+
+/* Adjust the progress bars for mobile */
+.skill-mf .progress {
+  height: 0.6rem;
+}
+.skill-mf .progress .progress-bar {
+  height: 0.6rem;
+}
+
+/* Ensure about section adjusts for smaller screens */
+.about-mf .about-img img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.about-info {
+  padding: 0;
+  font-size: 0.9rem;
+}
+.about-info li {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about-info li span:last-child {
+  margin-top: 5px;
+}
+
+/* Improve hero section for mobile screens */
+.hero .slider-item {
+  text-align: center;
+}
+.hero .slider-item .one-third {
+  display: none; /* Hide large images for smaller screens */
+}
+.hero .slider-item .one-forth {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Adjust padding and layout for mobile devices */
+@media (max-width: 768px) {
+  .ftco-about .row {
+    flex-direction: column-reverse;
+  }
+  .col-md-6 {
+    width: 100%;
+  }
+  .pl-lg-5 {
+    padding-left: 1rem !important;
+  }
+  .pb-5 {
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Optimize hero slider for small devices */
+.home-slider {
+  height: auto;
+}
+.slider-item {
+  min-height: 60vh;
+}
+.slider-item .text {
+  margin: 0 auto;
+}
+
+/* Ensure buttons and clickable areas are large enough */
+button, .btn, .nav-link {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+</style>
+
 
 /*======================================
 //--//-->   ABOUT
@@ -166,12 +269,7 @@
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<div id="notification" class="notification">
-    <div class="notification-content">
-        <p>Open this website in desktop mode for a better experience. If you are on mobile, you can use the desktop version of your browser.</p>
-        <button id="close-notification" class="close-btn">×</button>
-    </div>
-</div>
+
 
 <meta name="google-site-verification" content="QxksI4qnMQGKQzUHyrQnpiJ9TZokTy-yNWTVPxN8fHA" />
 
@@ -229,15 +327,7 @@
 						'Digital Marketer  ',
 					        'Freelancer   ',
 						'SEO Expert  ',	
-						'Link-Building  ',
 						'CopyWriting  ',
-						'Content Writing  ',
-						'YouTube SEO   ',
-					        'E-commerce SEO  ',
-					
-						
-					       
-						
 						];
 
 						// Create a function to display the typing animation for a given text
@@ -386,12 +476,10 @@
                     <li style="margin: 20px 0; transition: transform 0.2s;">
                         <span style="color: #ffcc00;">•</span> Copywriting
                     </li>
-                    <li style="margin: 20px 0; transition: transform 0.2s;">
-                        <span style="color: #ffcc00;">•</span> Content Writing
+			 <li style="margin: 20px 0; transition: transform 0.2s;">
+                        <span style="color: #ffcc00;">•</span> Social Media Advertising
                     </li>
-                    <li style="margin: 20px 0; transition: transform 0.2s;">
-                        <span style="color: #ffcc00;">•</span> Link-Building (Off-Page SEO) Services
-                    </li>
+                   
                 </ul>
             </div>
         </div>
@@ -402,14 +490,7 @@
 	
     <section class="ftco-section ftco-no-pb" id="resume-section"> 
     	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-    		<p>Digital Marketer, helping businesses to grow through strategic digital marketing.</p>
-
-		</div>
-        </div>
+    		
 	
 		<div class="row">
 			<h1 class="big-4">Certificates</h1>
@@ -463,74 +544,14 @@
 
 		
 	
+		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+    		<p>Digital Marketer, helping businesses to grow through strategic digital marketing.</p>
 
-<!-- 		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
 		</div>
-		
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2023-Present</span>
-						<h2>Social Media Advertising Expert</h2>
-						<span class="position">Multiple businesses</span>
-							<ul>
-								<li>Running social media ads(Meta ads,Tiktok ads,Google Ads,Yotube ads,Linkedin ads etc) for different purposes.</li>
-								<li>Converted multiple numbers of high-quality leads.</li>
-								<li>2X increase in conversion.</li>
-							</ul> -->
-<!-- 						</p>
-					</div>
-
-				</div>
-			        <div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2023-present</span>
-						<h2>SEO services</h2>
-						<span class="position">Multiple businesses with different categories</span>
-							<ul>
-								<li>Resulted in 70% of clients from Google search.</li>
-								<li>Increased 4X in number of clients.</li>
-								<li>Helping clients to generate more money by increasing their customers.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6"> -->
-<!-- 					<div class="resume-wrap ftco-animate">
-						<span class="date">2022-present</span>
-						<h2>Link-Building and Content Writing</h2>
-						<span class="position">Multiple websites with different categories</span>
-							<ul>
-								<li>Resulted in 70% website authority and a 30% increase in conversion rate.</li>
-								<li>Increased websites traffic(Hot audience) up to 70%.</li>
-								<li>Provided Guest Posts(Backlinks) with Do-follow Backlinks on Google News Approved websites with DA:70+, DR:70+, and Traffic:1K+ to 1M.</li>
-							</ul> 
-						</p>
-					</div>
-
-				</div>
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2023-present</span>
-						<h2>Youtube SEO services</h2>
-						<span class="position">Multiple Youtube channels with different categories</span>
-						<ul> -->
-<!-- 								<li>Resulted in 85% views from a user search.</li>
-								<li>Increased views and subscribers from 0 to 100k+ via Youtube SEO and Youtube Ads.</li>
-								<li>Helping clients to generate Millions via Youtube.</li>
-							</ul> 
-						</p>
-					</div>
-
-				</div>
-				
-			</div> -->
+        </div>
 <div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
     <h3>Check Resume</h3>
     <div class="popup-arrow">
@@ -588,91 +609,6 @@
 		
 
 
-<!-- 		<section class="ftco-section ftco-no-pb" id="testimonial-section"> 
-			<div class="container">
-				<div class="row justify-content-center pb-5">
-			  <div class="col-md-10 heading-section text-center ftco-animate"> -->
-				 
-
-<!-- 				  <h1 class="big big-2">Testimonials</h1>
-				<h2 class="mb-4">Testimonials</h2>
-				<h3>See here! What clients say.</h3>
-	
-			</div>
-			</div>
-	
-			<div class="row">
-				<div class="underline"></div>
-			</div>
-			<br>
-			
-				
-			
-			<div class="row d-flex">
-			  
-		
-				<div class="row d-flex justify-content-center">  
-					
-				   <div class="col-md-4 d-flex ftco-animate"> 
-					  <div class="blog-entry justify-content-end">
-					  <a href class="block-20 zoom-effect" style="background-image:url('images/Screenshot_20240625-121330.png');">
-					  </a>
-					  <div class="text mt-3 float-right d-block">
-		
-						<h3 class="heading">Fiverr review of past client.</a></h3>
-					     <p>Analytics of meta ads wich results in double ROI.</p>
-				  </div>
-					</div>
-				  </div>
-				  <div class="col-md-4 d-flex ftco-animate"> 
-				   <div class="blog-entry justify-content-end">
-				   <a href class="block-20 zoom-effect" style="background-image:url('images/Screenshot_20240625-121338.png');">
-				   </a>
-				   <div class="text mt-3 float-right d-block">
-	   
-					 <h3 class="heading">Fiverr review of past client.</a></h3>
-					  <p>High conversions from google search pages to the website.</p>
-				   </div>
-				 </div>
-			   </div>
-			   <div class="col-md-4 d-flex ftco-animate"> 
-				   <div class="blog-entry justify-content-end">
-				   <a href class="block-20 zoom-effect" style="background-image:url('images/Screenshot_20240625-122459.png');">
-				   </a>
-				   <div class="text mt-3 float-right d-block">
-	   
-					  <h3 class="heading">Fiverr review of past client.</a></h3> 
-					  <p>Captured high quality converting leads.</p> 
-				   </div>
-				 </div>
-			   </div>
-			   <div class="col-md-4 d-flex ftco-animate"> 
-				   <div class="blog-entry justify-content-end">
-				   <a href class="block-20 zoom-effect" style="background-image:url('images/Screenshot_20240625-122603.png');">
-				   </a>
-				   <div class="text mt-3 float-right d-block">
-	   
-					 <h3 class="heading">Fiverr review of past client.</a></h3>
-					    <p>Result of campaign which generates output in terms of high conversion.</p> 
-				   </div>
-				 </div>
-			   </div>
-			   <div class="col-md-4 d-flex ftco-animate"> 
-				<div class="blog-entry justify-content-end">
-				<a href class="block-20 zoom-effect" style="background-image:url('images/cr.PNG');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-	
-				  <h3 class="heading">Fiverr review of past client.</a></h3>
-				  <p>Result of campaign which generates output in terms of high conversion.</p> 
-				</div>
-			  </div>
-			</div>
-			   </div> 
-	
-	
-	 -->
-	
 
 
 
@@ -687,39 +623,11 @@
         <h1 class="big big-2">Contact</h1>
 	
         <h3 class="mb-4">Claim Your Free Consultation!</h3>
-<!--         <p>Below are the details to reach out to me!</p>  -->
+
       </div>
     </div>
 
-<!--     <div class="row d-flex contact-info mb-5">
-      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-        <div class="align-self-stretch box p-4 text-center">
-          <div class="icon d-flex align-items-center justify-content-center">
-            <span class="icon-map-signs"></span>
-          </div>
-          <h3 class="mb-4">Location</h3>
-          <p>Punjab, Pakistan</p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-        <div class="align-self-stretch box p-4 text-center">
-          <div class="icon d-flex align-items-center justify-content-center">
-            <span class="icon-phone2"></span>
-          </div>
-          <h3 class="mb-4">Contact Number</h3>
-          <p><a href="https://wa.me/+923005181071">+92 3005181071</a></p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-        <div class="align-self-stretch box p-4 text-center">
-          <div class="icon d-flex align-items-center justify-content-center">
-            <span class="icon-paper-plane"></span>
-          </div>
-          <h3 class="mb-4">Email Address</h3>
-          <p><a href="mailto:saim.letsconnectnow@gmail.com">saim.letsconnectnow@gmail.com</a></p>
-        </div>
-      </div>
-    </div> -->
+
 	<div class="row justify-content-center">
   <div class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
     <a href="mailto:saim.letsconnectnow@gmail.com" target="_blank" class="icon-link">
