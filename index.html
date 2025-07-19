@@ -1,197 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Misbah Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/ionicons.min.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/icomoon.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="QxksI4qnMQGKQzUHyrQnpiJ9TZokTy-yNWTVPxN8fHA" />
+
+  <!-- Mobile Fixes -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #111;
-      color: white;
-      padding: 1em 2em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1em;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 4em 2em;
-      background: linear-gradient(to right, #1f1c2c, #928dab);
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 2.5em;
-    }
-
-    .hero span {
-      color: #f7b731;
-    }
-
-    .section {
-      padding: 4em 2em;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .section h2 {
-      margin-bottom: 1em;
-      font-size: 2em;
-      text-align: center;
-    }
-
-    .services ul {
-      list-style-type: square;
-      padding-left: 1.5em;
-    }
-
-    .resume-download, .project-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-top: 2em;
-    }
-
-    .resume-download a, .project-link a {
-      color: white;
-      background-color: red;
-      padding: 0.8em 1.5em;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 1em;
-    }
-
-    .contact-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5em;
-      margin-top: 1em;
-      flex-wrap: wrap;
-    }
-
-    .contact-icons a {
-      color: #333;
-      font-size: 1.5em;
-      transition: 0.3s;
-    }
-
-    .contact-icons a:hover {
-      color: #f7b731;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2em;
-      background-color: #111;
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-      header, .hero, .section {
-        padding: 2em 1em;
+    @media screen and (max-width: 768px) {
+      .home-slider .slider-item .text h1 {
+        font-size: 2rem;
       }
-
-      nav ul {
-        flex-direction: column;
+      .text h2 {
+        font-size: 1.25rem;
+      }
+      .img-about {
+        display: flex;
+        justify-content: center;
         align-items: center;
       }
+      .resume-icon {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 36px;
+      }
+      .popup-arrow h3 {
+        font-size: 1.1rem;
+      }
+    }
+    .icon-link {
+      margin: 0 10px;
+    }
+    .icon-link i {
+      font-size: 24px;
     }
   </style>
 </head>
 
-<body>
-  <header>
-    <h1>Misbah</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-  <section class="hero">
-    <h1>Hi, I'm <span>Misbah</span></h1>
-    <p>Digital Marketer | Freelancer | SEO Expert | Copywriter</p>
-    <p>Helping businesses grow online.</p>
-  </section>
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Misbah</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#about" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#services" class="nav-link"><span>Services</span></a></li>
+          <li class="nav-item"><a href="#certificates" class="nav-link"><span>Certificates</span></a></li>
+          <li class="nav-item"><a href="#resume" class="nav-link"><span>Resume</span></a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>SEO Expert @Groxify with experience in digital marketing, content creation, and strategic growth. Passionate about helping brands establish their digital presence through modern tools and marketing channels.</p>
-  </section>
-
-  <section id="services" class="section services">
-    <h2>Services</h2>
-    <ul>
-      <li>SEO Optimization</li>
-      <li>Copywriting</li>
-      <li>Social Media Advertising</li>
-      <li>Link-Building / Guest Posting</li>
-      <li>Content Marketing</li>
-    </ul>
-  </section>
-
-  <section class="section resume-download">
-    <h2>Resume</h2>
-    <a href="https://drive.google.com/file/d/1-DCnNVKUd0gtRu7Z1omqSlkBh8R_I6Wd/view?usp=sharing" target="_blank">Download My CV</a>
-  </section>
-
-  <section id="projects" class="section project-link">
-    <h2>Projects</h2>
-    <a href="https://docs.google.com/document/d/1mVeMOZvHezLUvRHxHXMb88DjabBGtHopZ2ucUsYrv5Y/edit?usp=sharing" target="_blank">View My Work</a>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Let's connect! Claim your free consultation now.</p>
-    <div class="contact-icons">
-      <a href="mailto:saim.letsconnectnow@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/+923005181071" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/misbah0987654" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/misbahurrehmansaim/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <!-- HERO SECTION -->
+  <section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+      <div class="slider-item js-fullheight">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-center">
+            <div class="col-md-12 ftco-animate text-center d-flex align-items-center justify-content-center">
+              <div class="text">
+                <span class="subheading">Hey! I am</span>
+                <h1>Misbah</h1>
+                <h2>I’m a <span class="txt-rotate" data-period="2000" data-rotate='[ "Digital Marketer", "SEO Expert", "Copywriter", "Freelancer" ]'></span></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Misbah Portfolio. All rights reserved.</p>
-  </footer>
-</body>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="ftco-section ftco-no-pb">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-6 d-flex">
+          <div class="img-about img d-flex align-items-stretch">
+            <div class="overlay"></div>
+            <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.jpg);"></div>
+          </div>
+        </div>
+        <div class="col-md-6 pl-md-5 py-5">
+          <div class="row justify-content-start pb-3">
+            <div class="col-md-12 heading-section ftco-animate">
+              <h1 class="big">About</h1>
+              <h2 class="mb-4">About Me</h2>
+              <p>SEO Expert @Groxify with experience in digital marketing, content creation, and strategic growth. Passionate about helping brands establish their digital presence through modern tools and marketing channels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SERVICES SECTION -->
+  <section id="services" class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h2 class="mb-4">Services</h2>
+          <ul style="list-style-type: disc; text-align: left;">
+            <li>SEO Optimization</li>
+            <li>Copywriting</li>
+            <li>Social Media Advertising</li>
+            <li>Link-Building / Guest Posting</li>
+            <li>Content Marketing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES SECTION -->
+  <section id="certificates" class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h2 class="mb-4">Certificates</h2>
+          <p>Certified in SEO, Digital Marketing, and Content Strategy from leading platforms including Google and HubSpot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME SECTION -->
+  <section id="resume" class="ftco-section">
+    <div class="container text-center">
+      <h2 class="mb-4">Download My CV</h2>
+      <a href="https://drive.google.com/file/d/1-DCnNVKUd0gtRu7Z1omqSlkBh8R_I6Wd/view?usp=sharing" class="btn btn-danger" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="ftco-section">
+    <div class="container text-center">
+      <h2 class="mb-4">Contact</h2>
+      <p>Let’s connect! Claim your free consultation now.</p>
+      <div class="d-flex justify-content-center">
+        <a href="mailto:saim.letsconnectnow@gmail.com" class="icon-link" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/+923005181071" class="icon-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61558856431925" class="icon-link" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/misbah_ur_rehman_saim/" class="icon-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/misbah0987654" class="icon-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/misbahurrehmansaim/" class="icon-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+</body>
 </html>
