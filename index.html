@@ -1,604 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Misbah Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-	
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misbah Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+    body {
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+    }
 
-.about-mf .about-img img {
-  margin-left: 8px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
+    .hero {
+      text-align: center;
+      padding: 4em 2em;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
+    }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .9rem;
-  background-color: #c8c6d2;
+    .hero h1 {
+      font-size: 2.5em;
+    }
 
-}
+    .hero span {
+      color: #f7b731;
+    }
 
-.skill-mf .progress .progress-bar {
-  height: .9rem;
-  background-color: #380ef3;
+    .section {
+      padding: 4em 2em;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-}
+    .section h2 {
+      margin-bottom: 1em;
+      font-size: 2em;
+      text-align: center;
+    }
 
+    .services ul {
+      list-style-type: square;
+      padding-left: 1.5em;
+    }
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(192, 19, 223);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 0.0001ms steps(20, end) infinite;
-}
+    .resume-download, .project-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 2em;
+    }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #eef3e7;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
+    .resume-download a, .project-link a {
+      color: white;
+      background-color: red;
+      padding: 0.8em 1.5em;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 1em;
+    }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      margin-top: 1em;
+      flex-wrap: wrap;
+    }
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
+    .contact-icons a {
+      color: #333;
+      font-size: 1.5em;
+      transition: 0.3s;
+    }
 
+    .contact-icons a:hover {
+      color: #f7b731;
+    }
 
-/* project image zoom effect */
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #111;
+      color: white;
+    }
 
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.1s ease-out;
-}
+    @media (max-width: 600px) {
+      header, .hero, .section {
+        padding: 2em 1em;
+      }
 
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-.ftco-section {
-  padding: 4em 0;
-}
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
 
+<body>
+  <header>
+    <h1>Misbah</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-.resume-link {
-    display: inline-block;
-    text-decoration: none;
-}
+  <section class="hero">
+    <h1>Hi, I'm <span>Misbah</span></h1>
+    <p>Digital Marketer | Freelancer | SEO Expert | Copywriter</p>
+    <p>Helping businesses grow online.</p>
+  </section>
 
-.resume-icon {
-    display: inline-block;
-    font-size: 24px; /* Adjust size as needed */
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    line-height: 48px; /* Center icon vertically */
-    border-radius: 50%; /* Make the icon circular */
-    border: 5px solid red; /* Red boundary */
-    text-align: center; /* Center icon horizontally */
-    color: black; /* Icon color */
-    background-color: white; /* Icon background color */
-}
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>SEO Expert @Groxify with experience in digital marketing, content creation, and strategic growth. Passionate about helping brands establish their digital presence through modern tools and marketing channels.</p>
+  </section>
 
+  <section id="services" class="section services">
+    <h2>Services</h2>
+    <ul>
+      <li>SEO Optimization</li>
+      <li>Copywriting</li>
+      <li>Social Media Advertising</li>
+      <li>Link-Building / Guest Posting</li>
+      <li>Content Marketing</li>
+    </ul>
+  </section>
 
+  <section class="section resume-download">
+    <h2>Resume</h2>
+    <a href="https://drive.google.com/file/d/1-DCnNVKUd0gtRu7Z1omqSlkBh8R_I6Wd/view?usp=sharing" target="_blank">Download My CV</a>
+  </section>
 
+  <section id="projects" class="section project-link">
+    <h2>Projects</h2>
+    <a href="https://docs.google.com/document/d/1mVeMOZvHezLUvRHxHXMb88DjabBGtHopZ2ucUsYrv5Y/edit?usp=sharing" target="_blank">View My Work</a>
+  </section>
 
-.notification {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-    display: none; /* Hidden by default */
-}
-
-.notification-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-
-
-
-
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-
-<meta name="google-site-verification" content="QxksI4qnMQGKQzUHyrQnpiJ9TZokTy-yNWTVPxN8fHA" />
-
-  </head>
-	
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Misbah</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-		<li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-
-<!-- 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>  -->
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li> 
-<!--                   <li class="nav-item"><a href="#testimonial-section" class="nav-link"><span>Testimonials</span></a></li> -->
-		  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/01.png.jpg);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Misbah</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Digital Marketer  ',
-					        'Freelancer   ',
-						'SEO Expert  ',	
-						'CopyWriting  ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>Helping businesses to grow</h2>                                      
-<!-- 						<h2> with help of digital marketing.</h2> -->
-						 
-						
-					
-					    
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="01.png.jpg" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<h1 class="big">Services:-</h1>
-									<div class="underline"></div>
-									<!-- <p class="title-s">Services</p> -->
-									<span>SEO </span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90" aria-valuemin="0" 
-											aria-valuemax="100"></div>
-									</div>
-								
-									<span>Yotube Ads</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>									
-																		</div>
-
-							
-									<span>Link-Building / Guest Posting services</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" 
-											aria-valuemax="100"></div>
-									</div>
-									<span> Content writing </span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" 
-											aria-valuemax="100"></div>
-									</div>
-										<span> Copywriting </span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" 
-											aria-valuemax="100"></div>
-									</div>
-									<span>Web Development</span> <span class="pull-right">40%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" 
-											aria-valuemax="100"></div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								<p>SEO Expert @Groxify  </p>  
-								
-								<ul class="about-info mt-4 px-md-0 px-2"> 
-									<li class="d-flex"><span>Name:</span> <span> Misbah</span></li>
-									<li class="d-flex"><span>Profile:</span> <span>Digital Marketer</span></li> 
-									
-									
-									<li class="d-flex"><span>Language:</span> <span>English, Urdu</span></li>
-									
-						            <li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>  
-									
-								</ul>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-<section id="services-section" class="ftco-section" style="background-color: black; color: white; padding: 60px 0;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 text-center">
-                <h1 class="big-4">Services</h1>
-                <div class="underline" style="margin: 0 auto;"></div>
-            </div>
-        </div>
-        <br>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <ul style="list-style-type: none; padding: 0; font-size: 1.5rem;">
-                    <li style="margin: 20px 0; transition: transform 0.2s;">
-                        <span style="color: #ffcc00;">•</span> SEO
-                    </li>
-                    <li style="margin: 20px 0; transition: transform 0.2s;">
-                        <span style="color: #ffcc00;">•</span> Copywriting
-                    </li>
-			 <li style="margin: 20px 0; transition: transform 0.2s;">
-                        <span style="color: #ffcc00;">•</span> Social Media Advertising
-                    </li>
-                   
-                </ul>
-            </div>
-        </div>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Let's connect! Claim your free consultation now.</p>
+    <div class="contact-icons">
+      <a href="mailto:saim.letsconnectnow@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/+923005181071" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/misbah0987654" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/misbahurrehmansaim/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
-</section>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 Misbah Portfolio. All rights reserved.</p>
+  </footer>
+</body>
 
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section"> 
-    	<div class="container">
-    		
-	
-		<div class="row">
-			<h1 class="big-4">Certificates</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		<br>
-		<br>
-		<div class="row d-flex">
-          
-	
-		 <div class="row d-flex justify-content-center">  
-			 
-			<div class="col-md-4 d-flex ftco-animate"> 
-			   <div class="blog-entry justify-content-end">
-			   <a href class="block-20 zoom-effect" style="background-image:url('images/SEM certificate.PNG');">
-			   </a>
-			   <div class="text mt-3 float-right d-block">
- 
-				 <h3 class="heading">SEM certificate by Great Learning</a></h3>
-				
-			   </div>
-			 </div>
-		   </div>
-			 <div class="col-md-4 d-flex ftco-animate"> 
-			   <div class="blog-entry justify-content-end">
-			   <a href class="block-20 zoom-effect" style="background-image:url('images/SEO certificate.PNG');">
-			   </a>
-			   <div class="text mt-3 float-right d-block">
- 
-				 <h3 class="heading">SEO certificate by Great Learning</a></h3>
-				 
-			   </div>
-			 </div>
-		   </div>
-			
-			 <div class="col-md-4 d-flex ftco-animate"> 
-			   <div class="blog-entry justify-content-end">
-			   <a href class="block-20 zoom-effect" style="background-image:url('images/c1.PNG');">
-			   </a>
-			   <div class="text mt-3 float-right d-block">
- 
-				 <h3 class="heading">Google Analytics Measurement Certificate</a></h3>
-				
-			   </div>
-			 </div>
-		   </div>
-		</div>
-	 </div>
-		<br>	
-
-		
-	
-		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-    		<p>Digital Marketer, helping businesses to grow through strategic digital marketing.</p>
-
-		</div>
-        </div>
-<div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-    <h3>Check Resume</h3>
-    <div class="popup-arrow">
-        <li class="ftco-animate" style="list-style: none;">
-            <a href="https://drive.google.com/file/d/1_Cd6S7nfBR3WsSvT0d43JFyqhKXfu0KK/view?usp=sharing" target="_blank" class="resume-link">
-                <span class="fa fa-file-alt resume-icon"></span>
-            </a>
-        </li>
-        <div class="arrow"></div>
-    </div>
-    <br>
-    <div class="underline"></div>
-</div>
-
-
-
- 
-		<br>
-		<br>
-        
-
-
-        
-
-
-
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2> 
-
-			
-
-            
-			 
-
-
-         <div class="row" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-    <h3>Check Previous Work</h3>
-    <div class="popup-arrow">
-        <li class="ftco-animate" style="list-style: none;">
-            <a href="https://docs.google.com/document/d/1mVeMOZvHezLUvRHxHXMb88DjabBGtHopZ2ucUsYrv5Y/edit?usp=sharing" target="_blank" class="resume-link">
-                <span class="fa fa-file-alt resume-icon"></span>
-            </a>
-        </li>
-        <div class="arrow"></div>
-    </div>
-    <br>
-    <div class="underline"></div>
-</div>
-  
-		
-
-
-
-
-
-
-
- 
-
-<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-3">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Contact</h1>
-	
-        <h3 class="mb-4">Claim Your Free Consultation!</h3>
-
-      </div>
-    </div>
-
-
-	<div class="row justify-content-center">
-  <div class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-    <a href="mailto:saim.letsconnectnow@gmail.com" target="_blank" class="icon-link">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://wa.me/+923005181071" target="_blank" class="icon-link">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61558856431925" target="_blank" class="icon-link">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/misbah_ur_rehman_saim/" target="_blank" class="icon-link">
-      <i class="fab fa-instagram"></i>
-    </a>
-    
-    <a href="https://x.com/misbah0987654" target="_blank" class="icon-link">
-      <i class="fab fa-twitter"></i>
-    </a>
-  </div>
-</div>
-
-<style>
-  .icon-link {
-    margin: 0 10px; /* Adjust the value (10px) to increase/decrease spacing */
-  }
-
-  .icon-link i {
-    font-size: 24px; /* Adjust the icon size if needed */
-  }
-
-  .icon-link::before,
-  .icon-link::after {
-    content: none !important;
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-</section>
-
- 
-	
-    
-
-
-   
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script> 
-  
-   <script src="js/main.js"></script>
-    
-  </body>
-</html>  
- 
+</html>
