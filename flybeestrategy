@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlyBee Travels — Growth & Marketing Strategy 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #FAF3E0;
+    --navy: #0D1B2A;
+    --navy-mid: #1A2E44;
+    --navy-soft: #243D55;
+    --cream: #F9F5EE;
+    --cream-dark: #EFE9DC;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --green: #1E6B4F;
+    --green-pale: #E8F5EF;
+    --red-pale: #FDE8E8;
+    --red: #C0392B;
+    --border: #E0D8CC;
+    --radius: 12px;
+    --radius-sm: 6px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    background: var(--navy);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.1);
+  }
+  .cover-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .cover-pills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+  .cover-pill {
+    padding: 8px 20px;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 40px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+  }
+  .cover-pill.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 600px;
+  }
+  .cover-meta-item label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cover-meta-item p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+  .page + .page { border-top: 1px solid var(--border); }
+
+  /* ── SECTION HEADERS ── */
+  .section-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .section-intro {
+    font-size: 16px;
+    color: var(--text-mid);
+    margin-bottom: 40px;
+    max-width: 640px;
+  }
+
+  /* ── DIVIDER ── */
+  .gold-line {
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  /* ── ANALYSIS CARDS ── */
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .analysis-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .analysis-card.good { border-left: 3px solid var(--green); }
+  .analysis-card.bad { border-left: 3px solid var(--red); }
+  .analysis-card h4 {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+  .analysis-card.good h4 { color: var(--green); }
+  .analysis-card.bad h4 { color: var(--red); }
+  .analysis-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .dot.green { background: var(--green); }
+  .dot.red { background: var(--red); }
+
+  /* ── GOAL BANNERS ── */
+  .goal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .goal-card {
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .goal-card.seo { background: var(--navy); color: white; }
+  .goal-card.social { background: var(--gold-pale); color: var(--navy); border: 1px solid var(--gold-light); }
+  .goal-card .goal-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .goal-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .goal-card.seo h3 { color: var(--gold-light); }
+  .goal-card.social h3 { color: var(--navy); }
+  .goal-card p {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+  .goal-badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 5px 14px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .goal-card.seo .goal-badge {
+    background: rgba(201,168,76,0.2);
+    color: var(--gold-light);
+  }
+  .goal-card.social .goal-badge {
+    background: var(--navy);
+    color: var(--gold-light);
+  }
+
+  /* ── PHASE TIMELINE ── */
+  .phase-block {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+    cursor: pointer;
+    background: white;
+    border-bottom: 1px solid var(--border);
+  }
+  .phase-num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .phase-num.p1 { background: var(--navy); color: var(--gold); }
+  .phase-num.p2 { background: var(--gold); color: var(--navy); }
+  .phase-num.p3 { background: var(--green); color: white; }
+  .phase-num.p4 { background: var(--navy-mid); color: var(--gold-light); }
+  .phase-title-wrap h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .phase-title-wrap span {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .phase-body {
+    padding: 24px 28px;
+  }
+  .phase-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .phase-col-title {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .phase-col-title.seo { color: var(--navy); }
+  .phase-col-title.social { color: var(--gold); }
+  .task-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  .task-num {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── KEYWORD TABLE ── */
+  .kw-section {
+    margin-bottom: 32px;
+  }
+  .kw-category {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .kw-category::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .kw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .kw-pill {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .kw-pill .kw-text { color: var(--text-dark); font-weight: 500; margin-bottom: 2px; }
+  .kw-pill .kw-meta { color: var(--text-muted); font-size: 11px; }
+  .kw-pill.priority { border-color: var(--gold); border-left: 3px solid var(--gold); }
+
+  /* ── CONTENT PLAN ── */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .content-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .content-card-type {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .content-card h4 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
+  .content-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── SOCIAL STRATEGY ── */
+  .social-platform {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+    align-items: start;
+  }
+  .platform-icon {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .ig { background: #FFEAF0; color: #C13584; }
+  .fb { background: #E8F0FE; color: #1877F2; }
+  .yt { background: #FDECEA; color: #FF0000; }
+  .wa { background: #E8F5E9; color: #25D366; }
+  .platform-details h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
+  .platform-details p { font-size: 13px; color: var(--text-mid); margin-bottom: 12px; line-height: 1.5; }
+  .post-types { display: flex; gap: 8px; flex-wrap: wrap; }
+  .post-type-tag {
+    padding: 4px 12px;
+    background: var(--cream-dark);
+    border-radius: 40px;
+    font-size: 12px;
+    color: var(--text-mid);
+  }
+
+  /* ── METRICS TABLE ── */
+  .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .metrics-table th {
+    background: var(--navy);
+    color: var(--gold-light);
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .metrics-table td {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-mid);
+  }
+  .metrics-table tr:last-child td { border-bottom: none; }
+  .metrics-table tr:nth-child(even) td { background: var(--cream); }
+  .metric-name { font-weight: 500; color: var(--text-dark) !important; }
+  .metric-target { color: var(--green) !important; font-weight: 500; }
+
+  /* ── PITCH SECTION ── */
+  .pitch-box {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 40px;
+    color: white;
+    margin-bottom: 24px;
+  }
+  .pitch-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+  .pitch-box p { font-size: 15px; opacity: 0.8; line-height: 1.7; margin-bottom: 20px; }
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .service-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+  .service-card h5 {
+    color: var(--gold-light);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .service-card p {
+    font-size: 12px;
+    opacity: 0.65;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+  .service-price {
+    margin-top: 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── ROI STRIP ── */
+  .roi-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  .roi-item {
+    background: white;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .roi-item .roi-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .roi-item .roi-label { font-size: 12px; color: var(--text-muted); }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 13px;
+  }
+  .doc-footer strong { color: var(--gold); }
+
+  /* ── PRINT / PAGE BREAK ── */
+  @media print {
+    .cover { min-height: auto; padding: 60px 40px; page-break-after: always; }
+    .page { padding: 40px; }
+    .phase-block { break-inside: avoid; }
+  }
+
+  /* ── UTILITY ── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .tag {
+    padding: 5px 14px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .tag-navy { background: var(--navy); color: var(--gold-light); }
+  .tag-gold { background: var(--gold-pale); color: var(--navy); border: 1px solid var(--gold-light); }
+  .tag-green { background: var(--green-pale); color: var(--green); }
+  .callout {
+    background: var(--gold-pale);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text-mid);
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+  .callout strong { color: var(--navy); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  hr.section-rule { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+</style>
+</head>
+<body>
+
+<!-- ══════════ COVER ══════════ -->
+<div class="cover">
+  <p class="cover-label">Confidential Marketing Strategy Document</p>
+  <h1>FlyBee <span>Travels</span><br>Growth Strategy</h1>
+  <p class="cover-sub">Africa Tourism via SEO &nbsp;·&nbsp; Umrah via Social Media &nbsp;·&nbsp; 2026–2027</p>
+  <div class="cover-pills">
+    <span class="cover-pill active">SEO Strategy</span>
+    <span class="cover-pill active">Social Media</span>
+    <span class="cover-pill">Content Plan</span>
+    <span class="cover-pill">12-Month Roadmap</span>
+    <span class="cover-pill">Lead Generation</span>
+  </div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <label>Business</label>
+      <p>FlyBee Travels</p>
+    </div>
+    <div class="cover-meta-item">
+      <label>Location</label>
+      <p>Middlesbrough, UK</p>
+    </div>
+    <div class="cover-meta-item">
+      <label>Prepared</label>
+      <p>May 2026</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ WEBSITE ANALYSIS ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 1 — Where You Stand Today</p>
+  <h2 class="section-title">Website Analysis:<br>What's Working & What's Missing</h2>
+  <p class="section-intro">We reviewed every page of flybeetravels.co.uk to understand the current strengths and the gaps that are costing you leads every single day.</p>
+
+  <div class="analysis-grid">
+    <div class="analysis-card good">
+      <h4>✓ What's Working Well</h4>
+      <div class="analysis-item"><span class="dot green"></span><span>Modern, professional-looking website with a clean design and clear navigation</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>Dedicated Umrah package pages (5-night, 7-night, 14-night, Couple Umrah) — good for conversions</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>Africa destinations already featured: Cairo, Marrakech, Nairobi, Zanzibar, Cape Town — great foundation</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>Contact form and enquiry system in place for lead capture</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>Wide range of services: flights, hotels, visa, destinations, Umrah — full travel agency offering</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>Footer is well-structured with links to all services — helps Google crawl the site</span></div>
+    </div>
+    <div class="analysis-card bad">
+      <h4>✗ Critical Problems (Costing You Leads)</h4>
+      <div class="analysis-item"><span class="dot red"></span><span>No blog or content section — Google cannot find you for any search terms</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>Africa destination pages have no individual SEO-optimised landing pages (e.g. no dedicated "Kenya Safari Holiday UK" page)</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>Zero Google visibility — the website is essentially invisible to anyone searching for your services</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>No Google Business Profile optimisation visible — missing local SEO for Middlesbrough</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>No customer reviews or trust signals visible on the website beyond generic testimonials</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>No social media links visible — Umrah community audience cannot find you on Facebook/Instagram</span></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>The Bottom Line:</strong> Your website looks great but it is like a beautiful shop with no sign above the door and no address on Google Maps. People who are searching for exactly what you offer — Africa holidays from the UK, Umrah packages from Middlesbrough — cannot find you. This strategy fixes that.
+  </div>
+</div>
+
+<!-- ══════════ BUSINESS GOALS ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 2 — Your Business Goals</p>
+  <h2 class="section-title">Two Clear Goals,<br>Two Different Strategies</h2>
+  <p class="section-intro">You have two distinct revenue targets, and each needs a different approach. Here's how we tackle both.</p>
+
+  <div class="goal-grid">
+    <div class="goal-card seo">
+      <span class="goal-icon">🌍</span>
+      <h3>Africa Tourism Leads</h3>
+      <p>People across the UK are actively searching Google for Africa holiday packages. They type things like "Kenya safari holiday UK" or "Cape Town holiday from UK" and click the first result. Right now, that result is your competitor. SEO puts you there instead.</p>
+      <span class="goal-badge">PRIMARY: SEO Strategy</span>
+    </div>
+    <div class="goal-card social">
+      <span class="goal-icon">🕋</span>
+      <h3>Umrah Package Bookings</h3>
+      <p>Muslims in the UK planning Umrah are not just using Google — they are inside Facebook groups, WhatsApp communities, and Instagram. They trust recommendations from people they follow. Social media puts FlyBee Travels into those trusted circles.</p>
+      <span class="goal-badge">PRIMARY: Social Media Strategy</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Why this split matters:</strong> Trying to use SEO for Umrah or social media for Africa tourism would be far less effective. The way each audience searches and makes decisions is completely different. This two-track strategy is how you win both markets at the same time.
+  </div>
+</div>
+
+<!-- ══════════ SEO STRATEGY ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 3 — Africa Tourism SEO Strategy</p>
+  <h2 class="section-title">How We Get Africa Leads<br>Through Google</h2>
+  <p class="section-intro">SEO means making your website appear when someone types relevant searches into Google. Here is the step-by-step plan for Africa tourism.</p>
+
+  <div class="gold-line"></div>
+
+  <h3 style="font-family:'Playfair Display',serif; font-size:20px; color:var(--navy); margin-bottom:20px;">The Keywords We Target</h3>
+  <p style="color:var(--text-mid); font-size:14px; margin-bottom:20px;">Keywords are the exact words people type into Google. We target these three levels:</p>
+
+  <div class="kw-section">
+    <p class="kw-category">High-Priority Keywords (people ready to book)</p>
+    <div class="kw-grid">
+      <div class="kw-pill priority"><div class="kw-text">Kenya safari holiday UK</div><div class="kw-meta">High intent · Medium competition</div></div>
+      <div class="kw-pill priority"><div class="kw-text">Africa holiday packages UK 2026</div><div class="kw-meta">High intent · Medium competition</div></div>
+      <div class="kw-pill priority"><div class="kw-text">Cape Town holiday from UK</div><div class="kw-meta">High intent · Medium competition</div></div>
+      <div class="kw-pill priority"><div class="kw-text">Zanzibar holiday packages UK</div><div class="kw-meta">High intent · Low competition</div></div>
+      <div class="kw-pill priority"><div class="kw-text">Masai Mara safari UK</div><div class="kw-meta">High intent · Low competition</div></div>
+      <div class="kw-pill priority"><div class="kw-text">Morocco holiday packages from UK</div><div class="kw-meta">High intent · Medium competition</div></div>
+    </div>
+
+    <p class="kw-category">Research Keywords (people in planning phase)</p>
+    <div class="kw-grid">
+      <div class="kw-pill"><div class="kw-text">best time to visit Kenya safari</div><div class="kw-meta">Research · Low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">how to plan Africa trip from UK</div><div class="kw-meta">Research · Low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">Zanzibar vs Maldives beach holiday</div><div class="kw-meta">Research · Low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">Cairo Egypt travel guide UK tourists</div><div class="kw-meta">Research · Low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">Marrakech what to do 7 days</div><div class="kw-meta">Research · Low competition</div></div>
+    </div>
+
+    <p class="kw-category">Local SEO Keywords (Middlesbrough area customers)</p>
+    <div class="kw-grid">
+      <div class="kw-pill"><div class="kw-text">travel agent Middlesbrough</div><div class="kw-meta">Local · Very low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">Africa holidays Teesside</div><div class="kw-meta">Local · Very low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">Umrah packages Middlesbrough</div><div class="kw-meta">Local · Very low competition</div></div>
+      <div class="kw-pill"><div class="kw-text">travel agency North East England Africa</div><div class="kw-meta">Local · Very low competition</div></div>
+    </div>
+  </div>
+
+  <hr class="section-rule">
+
+  <h3 style="font-family:'Playfair Display',serif; font-size:20px; color:var(--navy); margin-bottom:20px;">New Pages We Need to Create</h3>
+  <p style="color:var(--text-mid); font-size:14px; margin-bottom:20px;">Each destination needs its own dedicated page built specifically to rank on Google. Currently these pages do not exist on your website.</p>
+
+  <div class="content-grid">
+    <div class="content-card">
+      <p class="content-card-type">New Page 1</p>
+      <h4>Kenya Safari Holidays from UK</h4>
+      <p>A full dedicated page covering Masai Mara, Nairobi, best time to visit, what's included, and a booking form. Target keyword: "Kenya safari holiday UK"</p>
+    </div>
+    <div class="content-card">
+      <p class="content-card-type">New Page 2</p>
+      <h4>Cape Town Holiday Packages</h4>
+      <p>Dedicated page for South Africa with Table Mountain, Cape Point, wine routes. Target keyword: "Cape Town holiday from UK"</p>
+    </div>
+    <div class="content-card">
+      <p class="content-card-type">New Page 3</p>
+      <h4>Zanzibar Beach Holidays</h4>
+      <p>Spice Island paradise page with Nungwi Beach, Stone Town, best seasons. Target keyword: "Zanzibar holiday packages UK"</p>
+    </div>
+    <div class="content-card">
+      <p class="content-card-type">New Page 4</p>
+      <h4>Morocco Holidays from UK</h4>
+      <p>Covers both Marrakech and Casablanca with souks, riads, cultural experiences. Target keyword: "Morocco holiday packages UK"</p>
+    </div>
+    <div class="content-card">
+      <p class="content-card-type">New Page 5</p>
+      <h4>Egypt & Cairo Packages</h4>
+      <p>Pyramids, Nile cruises, Sphinx, luxury Cairo hotels. Target keyword: "Egypt holiday packages from UK"</p>
+    </div>
+    <div class="content-card">
+      <p class="content-card-type">Blog Posts</p>
+      <h4>Weekly Travel Blog (12/year)</h4>
+      <p>"Best African Safari for Families", "7 Days in Zanzibar Itinerary", "Cairo vs Marrakech: Which to Visit First?" — each post drives Google traffic</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SOCIAL MEDIA STRATEGY ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 4 — Umrah Social Media Strategy</p>
+  <h2 class="section-title">How We Get Umrah Bookings<br>Through Social Media</h2>
+  <p class="section-intro">The Muslim community in the UK is highly active on social media when it comes to Umrah planning. Here is the platform-by-platform strategy.</p>
+
+  <div class="social-platform">
+    <div class="platform-icon ig">IG</div>
+    <div class="platform-details">
+      <h4>Instagram — Visual Inspiration & Brand Awareness</h4>
+      <p>Post stunning photos and videos of Makkah, Madinah, and the Umrah experience. Instagram is where people discover and dream. Use Reels showing the journey from the UK airport to the holy cities. Post 4–5 times per week. Use hashtags like #UmrahUK #UmrahPackages #MakkahLive</p>
+      <div class="post-types">
+        <span class="post-type-tag">Reels: Umrah journey vlogs</span>
+        <span class="post-type-tag">Before/after customer stories</span>
+        <span class="post-type-tag">Package price reveals</span>
+        <span class="post-type-tag">Countdown posts (Ramadan)</span>
+        <span class="post-type-tag">Duas & Islamic content</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-platform">
+    <div class="platform-icon fb">FB</div>
+    <div class="platform-details">
+      <h4>Facebook — Community Building & Direct Leads</h4>
+      <p>Create a Facebook Group called "UK Umrah Community — FlyBee Travels" and invite UK Muslims. Share tips, answer questions about Umrah, post package deals. Run targeted Facebook Ads to Muslim communities in the North East and across the UK. Facebook is where Umrah bookings actually happen — people ask in groups, get recommendations, then book.</p>
+      <div class="post-types">
+        <span class="post-type-tag">Facebook Group (free community)</span>
+        <span class="post-type-tag">Paid Ads to Muslim communities</span>
+        <span class="post-type-tag">Package deals with prices</span>
+        <span class="post-type-tag">Customer testimonials</span>
+        <span class="post-type-tag">Ramadan special offers</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-platform">
+    <div class="platform-icon wa">WA</div>
+    <div class="platform-details">
+      <h4>WhatsApp Business — Personal Conversion Tool</h4>
+      <p>Set up a WhatsApp Business account with a catalogue of Umrah packages. Add a WhatsApp button to every page of the website. Join relevant UK Muslim WhatsApp groups and share deals (with permission). Once someone enquires via Instagram or Facebook, move them to WhatsApp for personal consultation — this is where the booking closes. It feels personal and builds trust.</p>
+      <div class="post-types">
+        <span class="post-type-tag">WhatsApp broadcast list</span>
+        <span class="post-type-tag">Package catalogues</span>
+        <span class="post-type-tag">Quick reply templates</span>
+        <span class="post-type-tag">Seasonal deal announcements</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-platform">
+    <div class="platform-icon yt">YT</div>
+    <div class="platform-details">
+      <h4>YouTube — Long-Term Trust Builder</h4>
+      <p>Monthly videos: "Full Umrah Guide for UK Muslims", "What to Pack for Umrah", "FlyBee Customer Reviews". YouTube videos rank on Google AND get shared in WhatsApp groups. A 10-minute guide video can drive enquiries for years. This is the slowest channel to start but the most powerful long-term trust builder.</p>
+      <div class="post-types">
+        <span class="post-type-tag">Umrah guide videos</span>
+        <span class="post-type-tag">Customer journey vlogs</span>
+        <span class="post-type-tag">Package walkthroughs</span>
+        <span class="post-type-tag">Islamic travel content</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Key Timing:</strong> Umrah demand peaks in Ramadan (March 2027) and during school holidays. Start social media activity at least 3 months before Ramadan to build the audience. Run your biggest promotions in November–January when people start booking for Ramadan Umrah.
+  </div>
+</div>
+
+<!-- ══════════ 12-MONTH ROADMAP ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 5 — The Growth Roadmap</p>
+  <h2 class="section-title">12-Month Step-by-Step<br>Growth Plan</h2>
+  <p class="section-intro">Here is exactly what happens, month by month, in four clear phases. Each phase builds on the last.</p>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num p1">1</div>
+      <div class="phase-title-wrap">
+        <h3>Foundation Phase — Fix the Basics</h3>
+        <span>Months 1–2 &nbsp;·&nbsp; May – June 2026</span>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-cols">
+        <div>
+          <p class="phase-col-title seo">SEO Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>Set up Google Search Console and Google Analytics so we can track all traffic and rankings</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Fix all technical issues on the website that prevent Google from reading it properly</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Rewrite the homepage title and description so Google understands the business</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Set up and fully optimise Google Business Profile (Google Maps listing) for Middlesbrough</span></div>
+          <div class="task-item"><span class="task-num">5</span><span>Build the first 2 Africa destination pages (Kenya Safari and Cape Town)</span></div>
+        </div>
+        <div>
+          <p class="phase-col-title social">Social Media Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>Create and brand Instagram and Facebook business accounts for FlyBee Travels</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Set up WhatsApp Business account with Umrah package catalogue</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Create the Facebook Group "UK Umrah Community — FlyBee Travels"</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Post first 20 pieces of content: package deals, destination photos, Umrah guides</span></div>
+          <div class="task-item"><span class="task-num">5</span><span>Add WhatsApp and social media buttons to all pages of the website</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num p2">2</div>
+      <div class="phase-title-wrap">
+        <h3>Content Phase — Start Getting Found</h3>
+        <span>Months 3–5 &nbsp;·&nbsp; July – September 2026</span>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-cols">
+        <div>
+          <p class="phase-col-title seo">SEO Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>Build remaining 3 Africa destination pages (Zanzibar, Morocco, Egypt)</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Write and publish 6 Africa travel blog posts targeting research keywords</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Optimise all Umrah package pages for local + national UK keywords</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Start building backlinks (other websites linking to yours) — essential for ranking</span></div>
+          <div class="task-item"><span class="task-num">5</span><span>Add customer reviews section to website and start collecting real testimonials</span></div>
+        </div>
+        <div>
+          <p class="phase-col-title social">Social Media Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>Post 4–5 times per week on Instagram with Africa and Umrah content</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Launch first Ramadan teaser campaign — "Pre-book your Ramadan Umrah 2027"</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Run first Facebook Ads targeting UK Muslims aged 25–55 in major cities (£200–300/month test budget)</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Publish first two YouTube Umrah guide videos</span></div>
+          <div class="task-item"><span class="task-num">5</span><span>Grow Facebook Group to 500+ members through organic sharing and networking</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num p3">3</div>
+      <div class="phase-title-wrap">
+        <h3>Growth Phase — Leads Start Coming In</h3>
+        <span>Months 6–9 &nbsp;·&nbsp; October – January 2027</span>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-cols">
+        <div>
+          <p class="phase-col-title seo">SEO Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>First Google rankings appear — monitor and improve pages that are on page 2 to push to page 1</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Publish 6 more blog posts — now targeting higher competition keywords</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Build 10–15 quality backlinks from UK travel websites and directories</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Add FAQ sections to all destination pages (helps with Google's "People Also Ask" feature)</span></div>
+          <div class="task-item"><span class="task-num">5</span><span>Begin tracking which pages are generating enquiries and double down on those</span></div>
+        </div>
+        <div>
+          <p class="phase-col-title social">Social Media Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>This is peak Umrah booking season (Oct–Jan) — increase posting to daily</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Scale Facebook Ads budget to £500–800/month targeting Ramadan Umrah bookers</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Launch "Early Bird Ramadan Umrah" campaign with exclusive pricing for followers</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Collect and post 10+ video testimonials from past customers on all platforms</span></div>
+          <div class="task-item"><span class="task-num">5</span><span>Partner with UK-based Islamic content creators for sponsored posts about Umrah packages</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num p4">4</div>
+      <div class="phase-title-wrap">
+        <h3>Scale Phase — Dominate Your Market</h3>
+        <span>Months 10–12 &nbsp;·&nbsp; February – April 2027</span>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="phase-cols">
+        <div>
+          <p class="phase-col-title seo">SEO Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>First page Google rankings for Africa destination keywords — significant organic traffic arriving</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Expand to sub-destination pages: "Masai Mara Safari", "Table Mountain Tours", "Zanzibar Beaches"</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Target competitor comparison keywords: "Best Africa travel agents UK"</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Review and refresh all original blog posts with updated content and better keywords</span></div>
+        </div>
+        <div>
+          <p class="phase-col-title social">Social Media Work</p>
+          <div class="task-item"><span class="task-num">1</span><span>Ramadan 2027 — highest booking period. All social channels firing at full capacity</span></div>
+          <div class="task-item"><span class="task-num">2</span><span>Facebook Group should have 2,000+ members — a powerful free marketing asset</span></div>
+          <div class="task-item"><span class="task-num">3</span><span>Begin retargeting ads — show ads to people who visited the website but didn't enquire</span></div>
+          <div class="task-item"><span class="task-num">4</span><span>Review ROI of all ad spend and double down on the best-performing ad formats</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ METRICS ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 6 — Measuring Success</p>
+  <h2 class="section-title">What We Track &<br>What to Expect</h2>
+  <p class="section-intro">Here are the specific numbers we will measure monthly to prove the strategy is working and keep improving it.</p>
+
+  <div class="roi-strip">
+    <div class="roi-item">
+      <span class="roi-num">3–6</span>
+      <span class="roi-label">Months for first<br>Google rankings</span>
+    </div>
+    <div class="roi-item">
+      <span class="roi-num">12+</span>
+      <span class="roi-label">Africa leads/month<br>by Month 9</span>
+    </div>
+    <div class="roi-item">
+      <span class="roi-num">25+</span>
+      <span class="roi-label">Umrah enquiries<br>per month (peak)</span>
+    </div>
+    <div class="roi-item">
+      <span class="roi-num">2K+</span>
+      <span class="roi-label">Monthly website<br>visitors by Month 12</span>
+    </div>
+  </div>
+
+  <table class="metrics-table">
+    <thead>
+      <tr>
+        <th>What We Measure</th>
+        <th>Month 3 Target</th>
+        <th>Month 6 Target</th>
+        <th>Month 12 Target</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="metric-name">Website visitors from Google (per month)</td>
+        <td>50–100</td>
+        <td>300–500</td>
+        <td class="metric-target">1,500–2,500</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Africa travel enquiries via website</td>
+        <td>2–5</td>
+        <td>8–15</td>
+        <td class="metric-target">20–35 per month</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Keywords ranking on Google page 1</td>
+        <td>5–10</td>
+        <td>20–30</td>
+        <td class="metric-target">50–80 keywords</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Instagram followers</td>
+        <td>300</td>
+        <td>800</td>
+        <td class="metric-target">2,500+</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Facebook Group members</td>
+        <td>200</td>
+        <td>700</td>
+        <td class="metric-target">2,000+</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Umrah enquiries via social media</td>
+        <td>5–8</td>
+        <td>15–20</td>
+        <td class="metric-target">30–50 per month (peak)</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Google Business Profile views (per month)</td>
+        <td>100</td>
+        <td>400</td>
+        <td class="metric-target">1,000+</td>
+      </tr>
+      <tr>
+        <td class="metric-name">Online reviews (Google)</td>
+        <td>5</td>
+        <td>15</td>
+        <td class="metric-target">40+ reviews (4.8★)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════ THE PITCH ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Step 7 — The Investment</p>
+  <h2 class="section-title">Why You Need a Dedicated<br>SEO & Marketing Expert</h2>
+  <p class="section-intro">This is a professional, ongoing process that requires specialist knowledge, tools, and consistent execution. Here is what the service includes.</p>
+
+  <div class="pitch-box">
+    <h3>What You Get With Professional SEO Management</h3>
+    <p>SEO is not a one-time fix — it is an ongoing process just like watering a plant. Google rewards websites that consistently publish good content, earn links from other sites, and improve month after month. Trying to do this without a specialist is like trying to do your own accountancy — possible, but time-consuming and likely to cost more than the professional's fee in missed opportunities.</p>
+    <div class="service-cards">
+      <div class="service-card">
+        <h5>Technical SEO</h5>
+        <p>Monthly audit fixing everything that stops Google from reading and ranking your website properly — speed, structure, errors</p>
+        <p class="service-price">Included in package</p>
+      </div>
+      <div class="service-card">
+        <h5>Content Creation</h5>
+        <p>Writing destination pages and blog posts professionally optimised for Google, designed to rank and convert visitors into enquiries</p>
+        <p class="service-price">Included in package</p>
+      </div>
+      <div class="service-card">
+        <h5>Link Building</h5>
+        <p>Getting other reputable UK travel websites to link to yours — the most powerful ranking factor and the hardest to do without expertise</p>
+        <p class="service-price">Included in package</p>
+      </div>
+      <div class="service-card">
+        <h5>Local SEO</h5>
+        <p>Keeping Google Business Profile updated, managing reviews, and ensuring FlyBee ranks for "travel agent near me" searches in Middlesbrough</p>
+        <p class="service-price">Included in package</p>
+      </div>
+      <div class="service-card">
+        <h5>Monthly Reports</h5>
+        <p>Plain-English monthly report showing exactly how many people found you on Google, which pages worked, and what is planned next</p>
+        <p class="service-price">Included in package</p>
+      </div>
+      <div class="service-card">
+        <h5>Social Media Strategy</h5>
+        <p>Full Umrah social media content plan, scheduling, and Facebook/Instagram ad campaign management targeting UK Muslim audiences</p>
+        <p class="service-price">Add-on available</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>The honest truth about SEO:</strong> The travel industry in the UK is competitive online, but Africa tourism and Umrah packages from the North East of England is a very specific and underserved niche. Your competitors in Middlesbrough and the North East are NOT doing SEO well — this is a golden window of opportunity to become the dominant online presence in this space before they catch up.
+  </div>
+
+  <div class="two-col" style="margin-top:32px;">
+    <div class="analysis-card" style="border-left:3px solid var(--red);">
+      <h4 style="color:var(--red); font-size:13px; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:16px;">Without SEO (Current Situation)</h4>
+      <div class="analysis-item"><span class="dot red"></span><span>Zero Google visibility — competitors get all online leads</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>Business relies entirely on word of mouth and repeat customers</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>Africa tourism market opportunity completely missed</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>No passive, 24/7 lead generation working while you sleep</span></div>
+      <div class="analysis-item"><span class="dot red"></span><span>Competitors will continue to dominate until this is fixed</span></div>
+    </div>
+    <div class="analysis-card" style="border-left:3px solid var(--green);">
+      <h4 style="color:var(--green); font-size:13px; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:16px;">With SEO (12 Months From Now)</h4>
+      <div class="analysis-item"><span class="dot green"></span><span>First page Google rankings for Africa holiday keywords across the UK</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>20–35 Africa travel enquiries per month from Google alone</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>Dominant local presence in Middlesbrough and the North East</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>30–50 Umrah enquiries per month via social media (peak season)</span></div>
+      <div class="analysis-item"><span class="dot green"></span><span>2,000+ monthly website visitors building long-term brand equity</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ NEXT STEPS ══════════ -->
+<div class="page">
+  <p class="section-eyebrow">Ready to Start</p>
+  <h2 class="section-title">Next Steps</h2>
+  <p class="section-intro">Here is what happens when you decide to move forward.</p>
+
+  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; margin-bottom:40px;">
+    <div style="background:white; border:1px solid var(--border); border-radius:var(--radius); padding:20px; text-align:center;">
+      <div style="width:40px; height:40px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold); font-weight:500; font-size:14px; margin:0 auto 14px;">1</div>
+      <p style="font-size:13px; font-weight:500; color:var(--navy); margin-bottom:6px;">Discovery Call</p>
+      <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">30-minute call to align on goals, timeline, and budget</p>
+    </div>
+    <div style="background:white; border:1px solid var(--border); border-radius:var(--radius); padding:20px; text-align:center;">
+      <div style="width:40px; height:40px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--navy); font-weight:500; font-size:14px; margin:0 auto 14px;">2</div>
+      <p style="font-size:13px; font-weight:500; color:var(--navy); margin-bottom:6px;">Full SEO Audit</p>
+      <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Complete technical analysis and keyword research delivered in week 1</p>
+    </div>
+    <div style="background:white; border:1px solid var(--border); border-radius:var(--radius); padding:20px; text-align:center;">
+      <div style="width:40px; height:40px; background:var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-weight:500; font-size:14px; margin:0 auto 14px;">3</div>
+      <p style="font-size:13px; font-weight:500; color:var(--navy); margin-bottom:6px;">Month 1 Execution</p>
+      <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Technical fixes, Google profile, first 2 Africa pages live</p>
+    </div>
+    <div style="background:white; border:1px solid var(--border); border-radius:var(--radius); padding:20px; text-align:center;">
+      <div style="width:40px; height:40px; background:var(--navy-mid); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold-light); font-weight:500; font-size:14px; margin:0 auto 14px;">4</div>
+      <p style="font-size:13px; font-weight:500; color:var(--navy); margin-bottom:6px;">Monthly Reviews</p>
+      <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">Monthly report and strategy call — you see exactly what is working</p>
+    </div>
+  </div>
+
+  <div style="background:var(--navy); border-radius:var(--radius); padding:36px; text-align:center; color:white;">
+    <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">The Opportunity Window</p>
+    <p style="font-family:'Playfair Display',serif; font-size:22px; color:white; margin-bottom:16px; line-height:1.4;">Africa tourism from the UK is a fast-growing market.<br>Your website already has the destinations listed.<br>You just need to be found.</p>
+    <p style="font-size:14px; color:rgba(255,255,255,0.6); max-width:500px; margin:0 auto;">Every month without SEO is another month of free leads going to your competitors. The businesses that start today will dominate Google for the next 3–5 years.</p>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<div class="doc-footer">
+  <p>Prepared for <strong>FlyBee Travels</strong> · flybeetravels.co.uk · Middlesbrough, England &nbsp;·&nbsp; May 2026</p>
+  <p style="margin-top:6px; font-size:12px;">This document is confidential and prepared exclusively for the business owner.</p>
+</div>
+
+</body>
+</html>
