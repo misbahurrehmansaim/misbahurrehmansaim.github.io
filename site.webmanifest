@@ -1,0 +1,13 @@
+{
+  "name": "Misbah Ur Rehman Saim",
+  "short_name": "Misbah",
+  "description": "Growth Digital Marketer, SEO Expert, Vibe Coder and Freelancer.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
